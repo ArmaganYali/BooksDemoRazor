@@ -1,0 +1,13 @@
+﻿@page
+@model BooksDemoRazor.Pages.Books.IndexModel
+@{
+}
+
+
+<h2>Books</h2>
+
+@foreach (var b in Model.Books)
+{
+    <li>@b.Id - @b.Title</li>
+    
+}
