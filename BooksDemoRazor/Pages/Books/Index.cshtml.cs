@@ -7,19 +7,19 @@ namespace BooksDemoRazor.Pages.Books
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<Book> Books { get; set; } 
-        public AppDBContext _context { get; set; }  
+        public IEnumerable<Book>? Books { get; set; } 
+        public AppDBContext _db { get; set; }  
 
         public IndexModel(AppDBContext db) 
         {
-            _context = db;
+            _db = db;
            
         
         }
 
         public void OnGet()
         {
-            Books=_context.Books;
+            Books=_db.Books;
 
         }
     }
